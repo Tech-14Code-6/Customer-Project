@@ -1,0 +1,36 @@
+
+<div class="row">
+    
+    <div class="col-2">
+
+    </div>
+    <div class="col-8">
+        <h3>All Customer</h3>
+        <table class="table table-stripe hover">
+            <thead>
+                <tr>
+                    <th>Customer Name</th>
+                    <th>Customer Email</th>
+                    <th>Customer Phone</th>
+                    <th>Customer Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let c of customer">
+                    <td>{{c.cname}}</td>
+                    <td>{{c.cemail}}</td>
+                    <td>{{c.cphone}}</td>
+                    <td>
+                        <a class="btn btn-success" routerLink="/edit/{{c.cid}}">Edit</a> || 
+                        <button class="btn btn-danger" (click)="delCustome(c.cid)">Delete</button>
+                    </td>
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-2">
+        
+    </div>
+</div>
+
